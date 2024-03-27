@@ -42,7 +42,7 @@ async function updateValues(spreadsheetId, range, valueInputOption, values) {
     values,
   };
   try {
-    const result = await service.spreadsheets.values.update({
+    const result = await service.spreadsheets.values.append({
       spreadsheetId,
       range, // Adjusted range to start from A2
       valueInputOption,

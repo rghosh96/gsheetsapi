@@ -66,6 +66,13 @@ app.post("/api/data", async (req, res) => {
   console.log("Received data:", data);
 
   updateValues(SPREADSHEET_ID, "Sheet1!A2:B", "RAW", data)
+
+  // Example response data
+  const responseData = { message: "Logged data to google sheets successfully!" };
+
+  // Send JSON response back to the client
+  res.json(responseData);
+  
 });
 
 
